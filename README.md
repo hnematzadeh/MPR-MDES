@@ -15,7 +15,7 @@ Maximum Pattern Recognition (MPR) is a frequency-based filter ranking method, wh
 
 ##################### Instruction #########################
 
-After loading the corresponding dataset in your local drive:
+After loading the corresponding dataset from your local drive:
 
 
 1- Run lines 55-71 to calculate the summation of samples per label
