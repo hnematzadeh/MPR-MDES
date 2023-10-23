@@ -20,9 +20,8 @@ After loading the corresponding dataset from your local drive:
 
 1- Run lines 55-71 to calculate the summation of samples per label
 
-2- Run lines 73-87 for Maximum Pattern Recognition (MPR)
+2- Run lines 73-93 for Maximum Pattern Recognition (MPR)
 
-3- Run lines 90-104 to create a dataset with top 20 features of MPR
+3- Run lines 96-110 to create a dataset with top 20 features of MPR
 
-4- Run lines 109-403 for Multi-objective Discrete Evolution Strategy and its corresponding functions
- 
+4- Run lines 115-409 for Multi-objective Discrete Evolution Strategy and its corresponding functions
