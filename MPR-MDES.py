@@ -74,17 +74,23 @@ t0=time()
 from operator import itemgetter
 import itertools
 alpha=np.zeros(df.shape[1]-1)
-sorted_alpha=np.zeros(df.shape[1]-1)
+sorted_alpha1=np.zeros(df.shape[1]-1)
 for w in range(df.shape[1]-1):
     print(w) 
-    newdf=df.sort_values(w)   ##  O(n^2)
-    z = [(x[0], len(list(x[1]))) for x in itertools.groupby(newdf[newdf.shape[1]-1])] ## O(n)
+    newdf=df.sort_values(w)   
+    z = [(x[0], len(list(x[1]))) for x in itertools.groupby(newdf[newdf.shape[1]-1])] 
+    max_values = {}  # Dictionary to store maximum second values for each unique first value
+
+    for first, second in z:
+        if first not in max_values or second > max_values[first]:
+           max_values[first] = second
+
     d=1
-    for i in range (len(labels)): ##  O(n)
-         d= d * (max(filter(lambda f: f[0] == labels[i], z), key=itemgetter(1))[1] / a[i+1])
+    for i in range (len(labels)): 
+         d= d * (max_values[i+1] / a[i+1])
     alpha[w]=np.sqrt(d)    
 t1=time()
-print(t1-t0)         
+print(t1-t0)            
         
     ####################construct MC df########################################  
 limit=20
