@@ -404,7 +404,7 @@ for es in range (MaxIt):
                   Weights[i]=Weights[i]+beta*(1-Weights[i])
               
       Weights=np.array(Weights)/sum(np.array(Weights))  
-
+      BestParetoFront=ParetoFront
 
    print ("Iteration",  "  ", es,"      ","Number of F0 members", "  ",  len(ParetoFront)   )
 
