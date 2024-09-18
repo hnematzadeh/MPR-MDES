@@ -126,9 +126,9 @@ def Fitness(Xnew_n,ynew_n):
       dectree.fit(X_train,y_train)
       s[i]=dectree.score(X_test,y_test)
       cm=confusion_matrix(y_test,dectree.predict(X_test))
-      Precision[i] = metrics.precision_score(y_test, dectree.predict(X_test), average='micro')
-      Recall[i] = metrics.recall_score(y_test, dectree.predict(X_test), average='micro')
-      F1_score[i] = metrics.f1_score(y_test, dectree.predict(X_test), average='micro')
+      Precision[i] = metrics.precision_score(y_test, dectree.predict(X_test), average='macro')
+      Recall[i] = metrics.recall_score(y_test, dectree.predict(X_test), average='macro')
+      F1_score[i] = metrics.f1_score(y_test, dectree.predict(X_test), average='macro')
       
    
    # initial_pop[c].size = Xnew_n.shape[1]
@@ -432,9 +432,9 @@ for i in range(10):
   s[i]=dectree.score(X_test,y_test)
    # nm[i]=normalized_mutual_info_score(dectree.predict(X_test),y_test)
   cm=confusion_matrix(y_test,dectree.predict(X_test))
-  Precision[i] = metrics.precision_score(y_test, dectree.predict(X_test),average='micro')
-  Recall[i] = metrics.recall_score(y_test, dectree.predict(X_test),average='micro')
-  F1_score[i] = metrics.f1_score(y_test, dectree.predict(X_test),average='micro')
+  Precision[i] = metrics.precision_score(y_test, dectree.predict(X_test),average='macro')
+  Recall[i] = metrics.recall_score(y_test, dectree.predict(X_test),average='macro')
+  F1_score[i] = metrics.f1_score(y_test, dectree.predict(X_test),average='macro')
   # svm_linear=svm.SVC(C=50,kernel="linear")
   # svm_linear.fit(X_train,y_train)
   # s[i]=svm_linear.score(X_test,y_test)
