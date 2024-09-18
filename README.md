@@ -28,6 +28,8 @@ After loading the corresponding dataset from your local drive:
 
 4- Run lines 115-409 for Multi-objective Discrete Evolution Strategy and its corresponding functions
 
+Typo: According to the definition in Section 5.2 for multiclass, the average parameter in Section 5.3 is macro.
+
 
 **Cite this article**
 
