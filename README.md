@@ -28,8 +28,7 @@ After loading the corresponding dataset from your local drive:
 
 4- Run lines 115-409 for Multi-objective Discrete Evolution Strategy and its corresponding functions
 
-Typo: According to the definition in Section 5.2 for multiclass, the average parameter in Section 5.3 is macro.
-
+NOTICE: In Section 5.2 of the paper, we introduced using macro-averaging for the calculation of precision, recall, and F1-score in the multiclass classification. In Section 5.3, during the experimental analysis, we reported the results based on micro-averaging. However, the difference between macro-averaging and micro-averaging in our scenarios is not significant.
 
 **Cite this article**
 
